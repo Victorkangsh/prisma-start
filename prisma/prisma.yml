@@ -1,5 +1,4 @@
-#endpoint: ${env:PRISMA_ENDPOINT}
-endpoint: https://us1.prisma.sh/victorkang-5e7dc0/test1/dev
+endpoint: ${env:PRISMA_ENDPOINT}
 
 datamodel: datamodel.graphql
 
