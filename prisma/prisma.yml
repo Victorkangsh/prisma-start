@@ -1,0 +1,22 @@
+#endpoint: ${env:PRISMA_ENDPOINT}
+endpoint: https://us1.prisma.sh/victorkang-5e7dc0/test1/dev
+
+datamodel: datamodel.graphql
+
+# 用于身份验证的密码，你可以在终端用prisma token命令生成token
+secret: ${env:PRISMA_SECRET}
+
+# 在初次部署时的种子数据
+seed:
+  import: seed.graphql
+
+# generator可以替换为任意支持的语言如 go-client
+generate:
+  - generator: typescript-client
+    output: ../src/generated/prisma-client/
+
+# 执行prisma deploy时会同时执行的命令
+hooks:
+  post-deploy:
+    - graphql get-schema -p prisma
+    - graphql codegen

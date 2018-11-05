@@ -1,0 +1,20 @@
+
+
+type User {
+  id: ID! @unique
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  name: String!
+  password: String!
+}
+
+enum NOTIFICATION_TYPE {
+  OFFER
+  APPLY
+  COMMENT
+  LIKE
+  CHECK
+  SYSTEM
+  MESSAGE
+  FOLLOW
+}
