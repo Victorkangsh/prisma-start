@@ -21,18 +21,21 @@ yarn install
 
 详见[prisma中文网址](https://prisma.1wire.com)
 
+虽然dev依赖中有，但还是尽量确保你已经全局安装了prisma和graphqlgen@beta
+
+docker用户需要先执行`docker-compose up -d`
+
+没有docker的可以用demo服务器，配置详见[prisma中文网址](https://prisma.1wire.com)，直接执行以下命令即可创建。
+
 ```sh
-cd prisma
-docker-compose up -d
-cd ..
-yarn prisma deploy
+prisma deploy
 ```
 
-没有docker的可以用demo服务器，配置详见[prisma中文网址](https://prisma.1wire.com)
+此时会得到generate目录和tmp-resolvers目录，prisma client和resolver脚手架已经创建好了，将tmp-resolvers目录拷贝到resolvers目录，然后将其中的代码修改为自己的业务逻辑即可。
 
 ## 3. 运行 GraphQL server
 
-上面deploy好后就编辑自己的datamodel和schema，运行的话命令如下：
+上面deploy好后就编辑自己的datamodel和schema，运行的话命令如下：（确保env文件endpoint修改为你的服务器地址）
 
 ```sh
 yarn dev
