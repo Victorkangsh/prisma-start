@@ -1,5 +1,5 @@
-# source: https://us1.prisma.sh/victorkang-5e7dc0/test1/dev
-# timestamp: Mon Nov 05 2018 10:15:21 GMT+0800 (GMT+08:00)
+# source: https://us1.prisma.sh/victorkang-5e7dc0/prisma/dev
+# timestamp: Mon Nov 05 2018 16:09:43 GMT+0800 (GMT+08:00)
 
 type AggregateUser {
   count: Int!
@@ -9,8 +9,6 @@ type BatchPayload {
   """The number of nodes that have been affected by the Batch operation."""
   count: Long!
 }
-
-scalar DateTime
 
 """
 The `Long` scalar type represents non-fractional signed whole numeric values.
@@ -72,8 +70,6 @@ type Subscription {
 
 type User implements Node {
   id: ID!
-  createdAt: DateTime!
-  updatedAt: DateTime!
   name: String!
   password: String!
 }
@@ -105,20 +101,18 @@ type UserEdge {
 enum UserOrderByInput {
   id_ASC
   id_DESC
-  createdAt_ASC
-  createdAt_DESC
-  updatedAt_ASC
-  updatedAt_DESC
   name_ASC
   name_DESC
   password_ASC
   password_DESC
+  updatedAt_ASC
+  updatedAt_DESC
+  createdAt_ASC
+  createdAt_DESC
 }
 
 type UserPreviousValues {
   id: ID!
-  createdAt: DateTime!
-  updatedAt: DateTime!
   name: String!
   password: String!
 }
@@ -221,50 +215,6 @@ input UserWhereInput {
 
   """All values not ending with the given string."""
   id_not_ends_with: ID
-  createdAt: DateTime
-
-  """All values that are not equal to given value."""
-  createdAt_not: DateTime
-
-  """All values that are contained in given list."""
-  createdAt_in: [DateTime!]
-
-  """All values that are not contained in given list."""
-  createdAt_not_in: [DateTime!]
-
-  """All values less than the given value."""
-  createdAt_lt: DateTime
-
-  """All values less than or equal the given value."""
-  createdAt_lte: DateTime
-
-  """All values greater than the given value."""
-  createdAt_gt: DateTime
-
-  """All values greater than or equal the given value."""
-  createdAt_gte: DateTime
-  updatedAt: DateTime
-
-  """All values that are not equal to given value."""
-  updatedAt_not: DateTime
-
-  """All values that are contained in given list."""
-  updatedAt_in: [DateTime!]
-
-  """All values that are not contained in given list."""
-  updatedAt_not_in: [DateTime!]
-
-  """All values less than the given value."""
-  updatedAt_lt: DateTime
-
-  """All values less than or equal the given value."""
-  updatedAt_lte: DateTime
-
-  """All values greater than the given value."""
-  updatedAt_gt: DateTime
-
-  """All values greater than or equal the given value."""
-  updatedAt_gte: DateTime
   name: String
 
   """All values that are not equal to given value."""

@@ -27,8 +27,6 @@ type MutationResult {
 
 type User {
   id: ID!
-  createdAt: DateTime!
-  updatedAt: DateTime!
   name: String!
   password: String!
 }

@@ -2,8 +2,6 @@
 
 type User {
   id: ID! @unique
-  createdAt: DateTime!
-  updatedAt: DateTime!
   name: String!
   password: String!
 }

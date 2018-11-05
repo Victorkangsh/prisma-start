@@ -15,6 +15,8 @@ cd prisma-start
 yarn install
 ```
 
+配置在`.env`文件中，endpoint已注释，docker用户把注释去掉即可，prisma cloud用户在创建服务后修改即可。
+
 ## 2. 部署 Prisma server和数据库
 
 详见[prisma中文网址](https://prisma.1wire.com)
