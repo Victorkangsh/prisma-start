@@ -27,7 +27,15 @@ type MutationResult {
 
 type User {
   id: ID!
+  createdAt: DateTime!
   name: String!
   password: String!
+  posts: [Post!]!
 }
 
+type Post {
+  id: ID!
+  title: String
+  user: User
+  type: TYPE
+}

@@ -1,10 +1,11 @@
 language: typescript
 
 schema: ./src/schema.graphql
-context: ./src/addTypes.ts:Context
+context: ./src/utils.ts:Context
 models:
   files:
     - ./src/addTypes.ts
+    - ./src/generated/prisma-client
 
 output: ./src/generated/graphqlgen.ts
 

@@ -1,18 +1,19 @@
-
-
 type User {
   id: ID! @unique
+  createdAt: DateTime!
   name: String!
   password: String!
+  posts: [Post!]!
 }
 
-enum NOTIFICATION_TYPE {
-  OFFER
-  APPLY
+type Post {
+  id: ID! @unique
+  title: String
+  user: User
+  type: TYPE
+}
+
+enum TYPE {
   COMMENT
   LIKE
-  CHECK
-  SYSTEM
-  MESSAGE
-  FOLLOW
 }
