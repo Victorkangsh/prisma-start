@@ -1,4 +1,4 @@
-# import * from "./generated/prisma.graphql"
+# import * from "./generated/schema/prisma.graphql"
 
 type Query {
   users: [User!]!
@@ -25,17 +25,3 @@ type MutationResult {
   success: Boolean!
 }
 
-type User {
-  id: ID!
-  createdAt: DateTime!
-  name: String!
-  password: String!
-  posts: [Post!]!
-}
-
-type Post {
-  id: ID!
-  title: String
-  user: User
-  type: TYPE
-}

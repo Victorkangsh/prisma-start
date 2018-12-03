@@ -9,14 +9,15 @@ secret: ${env:PRISMA_SECRET}
 seed:
   import: seed.graphql
 
-# generator可以替换为任意支持的语言如 go-client
+# generator可以替换为任意支持的语言如 go-client,schema也同时生成出来，在跟schema只用写query，Mutation，subscription和自定义模式即可
 generate:
   - generator: typescript-client
     output: ../src/generated/prisma-client/
+  - generator: graphql-schema
+    output: ../src/generated/schema/
 
 # 执行prisma deploy时会同时执行的命令
 hooks:
   post-deploy:
-    - graphql get-schema -p prisma
     - prisma generate
     - graphqlgen
