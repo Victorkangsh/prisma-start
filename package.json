@@ -14,21 +14,21 @@
     "graphql": "14.0.2",
     "graphql-tag": "2.10.0",
     "graphql-tools": "4.0.3",
-    "graphql-yoga": "^1.16.7",
+    "graphql-yoga": "^1.16.9",
     "jsonwebtoken": "8.4.0",
-    "prisma-client-lib": "1.21.1"
+    "prisma-client-lib": "1.24.0"
   },
   "devDependencies": {
     "@types/bcryptjs": "2.4.2",
     "@types/jsonwebtoken": "^8.3.0",
-    "dotenv": "6.1.0",
-    "graphql-cli": "2.17.0",
-    "nodemon": "1.18.7",
+    "dotenv": "6.2.0",
+    "graphql-cli": "3.0.4",
+    "nodemon": "1.18.9",
     "npm-run-all": "4.1.5",
-    "prisma": "1.21.1",
+    "prisma": "1.24.0",
     "ts-node": "7.0.1",
-    "graphqlgen": "0.4.0",
-    "typescript": "3.2.1"
+    "graphqlgen": "0.5.0",
+    "typescript": "3.2.2"
   },
   "prettier": {
     "semi": false,
